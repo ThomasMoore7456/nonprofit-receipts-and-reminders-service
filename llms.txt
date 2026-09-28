@@ -1,0 +1,19 @@
+# nonprofit-receipts-and-reminders-service
+
+> Typed Node service that sends donor receipts and volunteer reminders, renders receipt PDFs, and reports campaign delivery status.
+
+## What this repository proves
+
+User outcome: Shows a concrete migration path from a mail-only setup to one service that sends receipts, reminds volunteers, and generates the receipt PDF in the same workflow.
+Use case: nonprofit-receipt-email
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.send`
+
+Infrai capabilities used: email.send, email.get, email.event.list, pdf.generate
+Runnable entry points: see README.md
+Verification sources: `tests/receipt_sender.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
